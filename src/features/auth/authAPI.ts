@@ -6,7 +6,7 @@ export function auth(authParams: {
 }) {
 	return axiosInstance
 		.post('/register', {
-			client_id: process.env.CLIENT_ID,
+			client_id: 'ju16a6m81mhid5ue1z3v2g0uh',
 			...authParams
 		})
 }
