@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/supermetrics-assignment/static/css/main.5c341d71.css",
-    "main.js": "/supermetrics-assignment/static/js/main.a4c8afbd.js",
+    "main.js": "/supermetrics-assignment/static/js/main.cecdb1b4.js",
     "static/css/735.ec8d5690.chunk.css": "/supermetrics-assignment/static/css/735.ec8d5690.chunk.css",
     "static/js/735.6166084e.chunk.js": "/supermetrics-assignment/static/js/735.6166084e.chunk.js",
     "static/css/488.860be7e6.chunk.css": "/supermetrics-assignment/static/css/488.860be7e6.chunk.css",
     "static/js/488.18b2cbb1.chunk.js": "/supermetrics-assignment/static/js/488.18b2cbb1.chunk.js",
     "index.html": "/supermetrics-assignment/index.html",
     "main.5c341d71.css.map": "/supermetrics-assignment/static/css/main.5c341d71.css.map",
-    "main.a4c8afbd.js.map": "/supermetrics-assignment/static/js/main.a4c8afbd.js.map",
+    "main.cecdb1b4.js.map": "/supermetrics-assignment/static/js/main.cecdb1b4.js.map",
     "735.ec8d5690.chunk.css.map": "/supermetrics-assignment/static/css/735.ec8d5690.chunk.css.map",
     "735.6166084e.chunk.js.map": "/supermetrics-assignment/static/js/735.6166084e.chunk.js.map",
     "488.860be7e6.chunk.css.map": "/supermetrics-assignment/static/css/488.860be7e6.chunk.css.map",
@@ -16,6 +16,6 @@
   },
   "entrypoints": [
     "static/css/main.5c341d71.css",
-    "static/js/main.a4c8afbd.js"
+    "static/js/main.cecdb1b4.js"
   ]
 }
