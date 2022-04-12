@@ -6,8 +6,7 @@ export function auth(authParams: {
 }) {
 	return axiosInstance
 		.post('/register', {
-			// TODO: move to secrets and pass with node_env varable
-			client_id: 'ju16a6m81mhid5ue1z3v2g0uh',
+			client_id: process.env.CLIENT_ID,
 			...authParams
 		})
 }
