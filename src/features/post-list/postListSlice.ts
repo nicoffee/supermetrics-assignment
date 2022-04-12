@@ -26,9 +26,9 @@ export interface PostListState {
 	};
 	visibleUserIds: string[] | null,
 	visiblePostIds: string[] | null,
-	status: 'idle' | 'loading' | 'failed';
 	activeUserId: string;
-	sortByDate: 'asc' | 'desc';
+	sortByDateOrder: 'asc' | 'desc';
+	status: 'idle' | 'loading' | 'failed';
 }
 
 const initialState: PostListState = {
@@ -37,7 +37,7 @@ const initialState: PostListState = {
 	visibleUserIds: null,
 	visiblePostIds: null,
 	activeUserId: '',
-	sortByDate: 'asc',
+	sortByDateOrder: 'asc',
 	status: 'idle',
 };
 
@@ -64,7 +64,7 @@ export const postListSlice = createSlice({
 			state.activeUserId = action.payload;
 		},
 		setSortByDate: (state, action: PayloadAction<'asc' | 'desc'>) => {
-			state.sortByDate = action.payload;
+			state.sortByDateOrder = action.payload;
 		},
 		filterUsers: (state, action: PayloadAction<string>) => {
 			const result = Object.values(state.userList).reduce<string[]>((acc, user) => {
@@ -144,7 +144,11 @@ export const selectUsers = (state: RootState) => {
 	return userList.filter(user => visibleUserIds.includes(user.id));
 }
 
+export const selectStatus = (state: RootState) => state.posts.status
+
 export const selectActiveUserId = (state: RootState) => state.posts.activeUserId
+
+export const selectSortByDate = (state: RootState) => state.posts.sortByDateOrder
 
 const sortPosts = (userPosts: Post[], direction: 'asc' | 'desc') => {
 	return userPosts.sort((postA: Post, postB: Post) => {
@@ -167,7 +171,7 @@ export const selectUserPosts = (state: RootState) => {
 	const activeUserPostIds = postIds.map(id => state.posts.postList[id])
 	const userPosts = visiblePostIds ? activeUserPostIds.filter(post => visiblePostIds?.includes(post.id)) : activeUserPostIds
 
-	return sortPosts(userPosts, state.posts.sortByDate);
+	return sortPosts(userPosts, state.posts.sortByDateOrder);
 }
 
 export const { filterUsers, filterPosts, setActiveUser, setSortByDate } = postListSlice.actions;

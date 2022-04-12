@@ -40,7 +40,7 @@
 
 .postListControls {
   display: flex;
-	gap: 16px;
+  gap: 16px;
 }
 
 .sortButtons {
@@ -49,5 +49,18 @@
 }
 
 .postFilterInput {
+  flex-grow: 1;
+}
+
+.sortButton {
+  cursor: pointer;
+  border: 2px solid transparent;
+}
+
+.activeButton {
+  background-color: rgba(112, 76, 182, 0.5);
+}
+
+.postFilter {
   flex-grow: 1;
 }

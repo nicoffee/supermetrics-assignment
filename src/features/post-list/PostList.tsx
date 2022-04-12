@@ -9,13 +9,16 @@ import {
   filterUsers,
   filterPosts,
   setSortByDate,
+  selectSortByDate,
+  selectStatus,
 } from './postListSlice'
 import { useAppSelector, useAppDispatch } from '../../app/hooks'
 
 import styles from './PostList.module.css'
 import { formatDate } from './formatDate'
+import { Input } from '../shared/ui/Input'
 
-export function PostList() {
+export default function PostList() {
   const [userFilter, setUserFilter] = useState('')
   const [postFilter, setPostFilter] = useState('')
 
@@ -23,21 +26,28 @@ export function PostList() {
   const userList = useAppSelector(selectUsers)
   const userPosts = useAppSelector(selectUserPosts)
   const activeUserId = useAppSelector(selectActiveUserId)
+  const sortByDateOrder = useAppSelector(selectSortByDate)
+  const state = useAppSelector(selectStatus)
   const dispatch = useAppDispatch()
 
   useEffect(() => {
     dispatch(getPostListThunk({ slToken, page: 1 }))
   }, [dispatch, slToken])
 
+  if (state === 'loading') {
+    return <span>Loading...</span>
+  }
+
   return (
     <div className={styles.grid}>
       <div className={styles.list}>
-        <input
+        <Input
           value={userFilter}
           onChange={(event) => {
             setUserFilter(event.target.value)
             dispatch(filterUsers(event.target.value))
           }}
+          size="small"
         />
         {userList.map((user) => (
           <div
@@ -57,27 +67,32 @@ export function PostList() {
         <div className={styles.postListControls}>
           <div className={styles.sortButtons}>
             <button
-              className={styles.activeButton}
+              className={`${styles.sortButton} ${
+                sortByDateOrder === 'asc' && styles.activeButton
+              }`}
               type="button"
               onClick={() => dispatch(setSortByDate('asc'))}
             >
               🔼
             </button>
             <button
-              className={styles.activeButton}
+              className={`${styles.sortButton} ${
+                sortByDateOrder === 'desc' && styles.activeButton
+              }`}
               type="button"
               onClick={() => dispatch(setSortByDate('desc'))}
             >
               🔽
             </button>
           </div>
-          <input
-            className={styles.postFilterInput}
+          <Input
+            classNames={styles.postFilter}
             value={postFilter}
             onChange={(event) => {
               setPostFilter(event.target.value)
               dispatch(filterPosts(event.target.value))
             }}
+            size="small"
           />
         </div>
 
