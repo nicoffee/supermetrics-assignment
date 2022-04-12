@@ -1,0 +1,9 @@
+.input {
+  font-size: 32px;
+  padding: 2px;
+  text-align: center;
+}
+
+.input.small {
+  font-size: 16px;
+}
