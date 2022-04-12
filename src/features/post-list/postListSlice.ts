@@ -27,7 +27,7 @@ export interface PostListState {
 	visibleUserIds: string[] | null,
 	visiblePostIds: string[] | null,
 	activeUserId: string;
-	sortByDateOrder: 'asc' | 'desc';
+	sortByDateOrder: 'asc' | 'desc' | null;
 	status: 'idle' | 'loading' | 'failed';
 }
 
@@ -36,8 +36,8 @@ const initialState: PostListState = {
 	userList: {},
 	visibleUserIds: null,
 	visiblePostIds: null,
+	sortByDateOrder: null,
 	activeUserId: '',
-	sortByDateOrder: 'asc',
 	status: 'idle',
 };
 
@@ -171,7 +171,7 @@ export const selectUserPosts = (state: RootState) => {
 	const activeUserPostIds = postIds.map(id => state.posts.postList[id])
 	const userPosts = visiblePostIds ? activeUserPostIds.filter(post => visiblePostIds?.includes(post.id)) : activeUserPostIds
 
-	return sortPosts(userPosts, state.posts.sortByDateOrder);
+	return  state.posts.sortByDateOrder ? sortPosts(userPosts, state.posts.sortByDateOrder) : userPosts;
 }
 
 export const { filterUsers, filterPosts, setActiveUser, setSortByDate } = postListSlice.actions;
