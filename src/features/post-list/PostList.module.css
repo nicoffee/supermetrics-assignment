@@ -1,0 +1,66 @@
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 20px;
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.user {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px;
+  border: 1px solid #ededed;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: border-color 0.3s ease-in-out;
+}
+
+.activeUser {
+  border-color: black;
+}
+
+.post {
+  border: 1px solid #ededed;
+  border-radius: 4px;
+}
+
+.postHeader {
+  padding: 8px;
+}
+
+.postContent {
+  padding: 8px;
+}
+
+.postListControls {
+  display: flex;
+  gap: 16px;
+}
+
+.sortButtons {
+  display: flex;
+  gap: 4px;
+}
+
+.postFilterInput {
+  flex-grow: 1;
+}
+
+.sortButton {
+  cursor: pointer;
+  border: 2px solid transparent;
+}
+
+.activeButton {
+  background-color: rgba(112, 76, 182, 0.5);
+}
+
+.postFilter {
+  flex-grow: 1;
+}
