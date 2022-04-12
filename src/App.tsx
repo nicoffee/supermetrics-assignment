@@ -1,9 +1,11 @@
-import { useEffect } from 'react'
-import { Auth } from './features/auth/Auth'
-import { PostList } from './features/post-list/PostList'
+import React from 'react'
+import { Suspense, useEffect } from 'react'
 import { useAppSelector, useAppDispatch } from './app/hooks'
 import { getSlToken, selectSlToken } from './features/auth/authSlice'
 import styles from './App.module.css'
+
+const Auth = React.lazy(() => import('./features/auth/Auth'))
+const PostList = React.lazy(() => import('./features/post-list/PostList'))
 
 function App() {
   const slToken = useAppSelector(selectSlToken)
@@ -15,7 +17,9 @@ function App() {
 
   return (
     <div className={`${styles.content} ${slToken ? '' : styles.overlay}`}>
-      {slToken ? <PostList /> : <Auth />}
+      <Suspense fallback={<div>Loading...</div>}>
+        {slToken ? <PostList /> : <Auth />}
+      </Suspense>
     </div>
   )
 }
