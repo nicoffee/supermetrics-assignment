@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/supermetrics-assignment/static/css/main.c6bebc4e.css",
+    "main.js": "/supermetrics-assignment/static/js/main.2f3d3e21.js",
+    "static/media/logo.svg": "/supermetrics-assignment/static/media/logo.b2e5a01e505f739f1484b881277d5186.svg",
+    "index.html": "/supermetrics-assignment/index.html",
+    "main.c6bebc4e.css.map": "/supermetrics-assignment/static/css/main.c6bebc4e.css.map",
+    "main.2f3d3e21.js.map": "/supermetrics-assignment/static/js/main.2f3d3e21.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.c6bebc4e.css",
+    "static/js/main.2f3d3e21.js"
+  ]
+}
