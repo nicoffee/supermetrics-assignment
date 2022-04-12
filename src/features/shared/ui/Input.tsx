@@ -22,17 +22,15 @@ export const Input = ({
   required,
   size = 'regular',
 }: Props) => (
-  <>
+  <div className={`${styles.inputContainer} ${classNames}`}>
     {label && <label htmlFor={id}>{label}</label>}
     <input
-      className={`${styles.input} ${
-        size === 'small' && styles.small
-      } ${classNames}`}
+      className={`${styles.input} ${size === 'small' && styles.small}`}
       id={id}
       type={type}
       value={value}
       onChange={onChange}
       required={required}
     />
-  </>
+  </div>
 )

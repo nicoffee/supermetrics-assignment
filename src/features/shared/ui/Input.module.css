@@ -7,3 +7,9 @@
 .input.small {
   font-size: 16px;
 }
+
+.inputContainer {
+	display: flex;
+	flex-direction: column;
+	gap: 8px;
+}
