@@ -1,14 +1,21 @@
 {
   "files": {
-    "main.css": "/supermetrics-assignment/static/css/main.c6bebc4e.css",
-    "main.js": "/supermetrics-assignment/static/js/main.2f3d3e21.js",
-    "static/media/logo.svg": "/supermetrics-assignment/static/media/logo.b2e5a01e505f739f1484b881277d5186.svg",
+    "main.css": "/supermetrics-assignment/static/css/main.5c341d71.css",
+    "main.js": "/supermetrics-assignment/static/js/main.a4c8afbd.js",
+    "static/css/735.ec8d5690.chunk.css": "/supermetrics-assignment/static/css/735.ec8d5690.chunk.css",
+    "static/js/735.6166084e.chunk.js": "/supermetrics-assignment/static/js/735.6166084e.chunk.js",
+    "static/css/488.860be7e6.chunk.css": "/supermetrics-assignment/static/css/488.860be7e6.chunk.css",
+    "static/js/488.18b2cbb1.chunk.js": "/supermetrics-assignment/static/js/488.18b2cbb1.chunk.js",
     "index.html": "/supermetrics-assignment/index.html",
-    "main.c6bebc4e.css.map": "/supermetrics-assignment/static/css/main.c6bebc4e.css.map",
-    "main.2f3d3e21.js.map": "/supermetrics-assignment/static/js/main.2f3d3e21.js.map"
+    "main.5c341d71.css.map": "/supermetrics-assignment/static/css/main.5c341d71.css.map",
+    "main.a4c8afbd.js.map": "/supermetrics-assignment/static/js/main.a4c8afbd.js.map",
+    "735.ec8d5690.chunk.css.map": "/supermetrics-assignment/static/css/735.ec8d5690.chunk.css.map",
+    "735.6166084e.chunk.js.map": "/supermetrics-assignment/static/js/735.6166084e.chunk.js.map",
+    "488.860be7e6.chunk.css.map": "/supermetrics-assignment/static/css/488.860be7e6.chunk.css.map",
+    "488.18b2cbb1.chunk.js.map": "/supermetrics-assignment/static/js/488.18b2cbb1.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.c6bebc4e.css",
-    "static/js/main.2f3d3e21.js"
+    "static/css/main.5c341d71.css",
+    "static/js/main.a4c8afbd.js"
   ]
 }
