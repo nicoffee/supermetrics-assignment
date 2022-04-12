@@ -70,7 +70,7 @@ describe('postsSlice reducer', () => {
 		visibleUserIds: null,
 		visiblePostIds: null,
 		activeUserId: '',
-		sortByDateOrder: 'asc',
+		sortByDateOrder: null,
 		status: 'idle',
 	};
 
@@ -81,7 +81,7 @@ describe('postsSlice reducer', () => {
 			visibleUserIds: null,
 			visiblePostIds: null,
 			activeUserId: '',
-			sortByDateOrder: 'asc',
+			sortByDateOrder: null,
 			status: 'idle',
 		});
 	});
